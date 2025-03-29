@@ -37,6 +37,17 @@ public class User
 
     public String addCompletedProblem(Problem problem)
     {
+        if(problem.getName().isEmpty())
+            return "Problem name is empty!";
+        if(problem.getDescription().isEmpty())
+            return "Problem description is empty!";
+        if(problem.getCategory().isEmpty())
+            return "Problem category is empty!";
+        if(problem.getDifficulty() == 0)
+            return "Problem difficulty is empty!";
+        if(problem.getSolution().isEmpty())
+            return "Problem solution is empty!";
+
         completedProblems.add(problem);
 
         if(completedProblems.size() % 10 == 0)
@@ -78,12 +89,11 @@ public class User
     }
 
     // Can implement when StudyPlan use case is implemented
-    /*
     public static String adjustStudyPlan()
     {
         return "Study Plan adjusted successfully.";
     }
-    */
+
 
     // Able to run things through main if needed
 

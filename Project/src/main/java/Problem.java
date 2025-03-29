@@ -6,13 +6,13 @@ public class Problem
     private int difficulty;
     private String solution;
 
-    public Problem(String n, String de, String c, int di, String s)
+    public Problem(String name, String description, String category, int difficulty, String solution)
     {
-        name = n;
-        description = de;
-        category = c;
-        difficulty = di;
-        solution = s;
+        this.name = name;
+        this.description = description;
+        this.category = category;
+        this.difficulty = difficulty;
+        this.solution = solution;
     }
 
     public Problem()
