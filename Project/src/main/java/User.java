@@ -13,6 +13,7 @@ public class User
     public int points;
     public ArrayList<Problem> completedProblems;
     public StudyPlan studyPlan;
+    public boolean isLoggedIn;
 
     public User()
     {
@@ -25,8 +26,15 @@ public class User
         badges = new ArrayList<>();
         points = 0;
         completedProblems = new ArrayList<>();
-        StudyPlan studyPlan = new StudyPlan();
-        System.out.println("User created successfully.");
+        studyPlan = new StudyPlan();
+        isLoggedIn = true;
+        System.out.println("User created successfully and logged in.");
+    }
+
+    public void logout()
+    {
+        isLoggedIn = false;
+        System.out.println("User logged out successfully.");
     }
 
     public String addBadge(Badge badge)
@@ -88,14 +96,10 @@ public class User
         return "Points remaining to level up: " + (100 - points) + ".";
     }
 
-    // Can implement when StudyPlan use case is implemented
     public static String adjustStudyPlan()
     {
         return "Study Plan adjusted successfully.";
     }
-
-
-    // Able to run things through main if needed
 
     public static void main(String args[])
     {
@@ -104,6 +108,7 @@ public class User
         for(int i=0; i<9; i++)
             user.addCompletedProblem(problem);
         System.out.println(user.addCompletedProblem(problem));
+        
+        user.logout();
     }
-
 }
