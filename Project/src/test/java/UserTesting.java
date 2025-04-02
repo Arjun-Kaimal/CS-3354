@@ -7,6 +7,15 @@ public class UserTesting
     Problem problem = new Problem("name", "desc", "cat", 1, "solution");
 
     @Test
+    public void testUserLogout() {
+        User user = new User();
+        assertTrue("User should be logged in initially", user.isLoggedIn);
+        
+        user.logout();
+        assertFalse("User should be logged out after calling logout()", user.isLoggedIn);
+    }
+
+    @Test
     void addCompletedProblem_tc1()
     {
         /*
