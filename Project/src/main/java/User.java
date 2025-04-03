@@ -33,6 +33,9 @@ public class User
 
     public boolean logout()
     {
+        if(isLoggedIn = false){
+            return false;
+        }
         isLoggedIn = false;
         System.out.println("User logged out successfully.");
         return true;
