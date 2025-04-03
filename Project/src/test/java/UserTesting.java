@@ -8,11 +8,11 @@ public class UserTesting
 
     @Test
     public void testUserLogout() {
-        
-        assertTrue("User should be logged in initially", user.isLoggedIn);
+
+        assertEquals(true, user.isLoggedIn);
         
         user.logout();
-        assertFalse("User should be logged out after calling logout()", user.isLoggedIn);
+        assertEquals(false, user.isLoggedIn);
     }
 
     @Test
