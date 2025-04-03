@@ -8,7 +8,7 @@ public class UserTesting
 
     @Test
     public void testUserLogout() {
-        User user = new User();
+        
         assertTrue("User should be logged in initially", user.isLoggedIn);
         
         user.logout();
