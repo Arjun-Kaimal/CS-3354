@@ -34,6 +34,7 @@ public class User
     public boolean logout()
     {
         if(isLoggedIn = false){
+            System.out.println("You must be logged in before logging out!");
             return false;
         }
         isLoggedIn = false;
