@@ -42,6 +42,17 @@ public class User
         return true;
     }
 
+    public boolean login()
+    {
+        if(isLoggedIn){
+            System.out.println("User is already logged in!");
+            return false;
+        }
+        isLoggedIn = true;
+        System.out.println("User logged in successfully.");
+        return true;
+    }
+
     public String addBadge(Badge badge)
     {
         badges.add(badge);
