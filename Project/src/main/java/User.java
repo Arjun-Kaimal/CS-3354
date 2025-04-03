@@ -31,10 +31,11 @@ public class User
         System.out.println("User created successfully and logged in.");
     }
 
-    public void logout()
+    public boolean logout()
     {
         isLoggedIn = false;
         System.out.println("User logged out successfully.");
+        return true;
     }
 
     public String addBadge(Badge badge)

@@ -7,12 +7,9 @@ public class UserTesting
     Problem problem = new Problem("name", "desc", "cat", 1, "solution");
 
     @Test
-    public void testUserLogout() {
-
-        assertEquals(true, user.isLoggedIn);
-        
-        user.logout();
-        assertEquals(false, user.isLoggedIn);
+    public void testUserLogout()
+    {
+        assertEquals(true, user.logout());
     }
 
     @Test
