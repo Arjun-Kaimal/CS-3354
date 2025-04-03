@@ -13,6 +13,33 @@ public class UserTesting
     }
 
     @Test
+    void testUserLogin()
+    {
+        /*
+        testUserLogin goes over logging in a user after logout
+
+        Expected result: true
+         */
+
+        System.out.println("\ntestUserLogin");
+        user.logout(); // Ensure logged out first
+        assertEquals(true, user.login());
+    }
+
+    @Test
+    void testUserLoginWhileAlreadyLoggedIn()
+    {
+        /*
+        testUserLoginWhileAlreadyLoggedIn checks logging in when already logged in
+
+        Expected result: false
+         */
+
+        System.out.println("\ntestUserLoginWhileAlreadyLoggedIn");
+        assertEquals(false, user.login());
+    }
+
+    @Test
     void addCompletedProblem_tc1()
     {
         /*
