@@ -3,8 +3,7 @@ import java.time.LocalDate;
 
 public class User
 {
-    public String userID;
-    public String username;
+    public int userID;
     public String email;
     public String password;
     public int skillLevel;
@@ -17,8 +16,7 @@ public class User
 
     public User()
     {
-        userID = "";
-        username = "";
+        userID = 0;
         email = "";
         password = "";
         skillLevel = 0;
@@ -27,13 +25,13 @@ public class User
         points = 0;
         completedProblems = new ArrayList<>();
         studyPlan = new StudyPlan();
-        isLoggedIn = true;
-        System.out.println("User created successfully and logged in.");
+        isLoggedIn = false;
     }
 
     public boolean logout()
     {
-        if(isLoggedIn = false){
+        if(isLoggedIn == false)
+        {
             System.out.println("You must be logged in before logging out!");
             return false;
         }
@@ -42,14 +40,42 @@ public class User
         return true;
     }
 
-    public boolean login()
+    public boolean login(String em, String pass)
     {
-        if(isLoggedIn){
+        if(isLoggedIn)
+        {
             System.out.println("User is already logged in!");
             return false;
         }
-        isLoggedIn = true;
-        System.out.println("User logged in successfully.");
+
+        if(validEmail(em) && validPassword(pass))
+        {
+            email = em;
+            password = pass;
+            isLoggedIn = true;
+            System.out.println("User logged in successfully.");
+            return true;
+        }
+
+        return false;
+    }
+
+    public boolean validEmail(String em)
+    {
+        if(em.contains("@") && em.contains("."))
+            return true;
+
+        System.out.println("Not a valid email address.");
+        return false;
+    }
+
+    public boolean validPassword(String pass)
+    {
+        if(pass.length() < 8 )
+        {
+            System.out.println("Password needs to be at least 8 characters.");
+            return false;
+        }
         return true;
     }
 

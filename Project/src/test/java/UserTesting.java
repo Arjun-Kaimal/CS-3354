@@ -7,37 +7,81 @@ public class UserTesting
     Problem problem = new Problem("name", "desc", "cat", 1, "solution");
 
     @Test
-    public void testUserLogout()
-    {
-        assertEquals(true, user.logout());
-    }
-
-    @Test
-    void testUserLogin()
+    void login_tc1()
     {
         /*
-        testUserLogin goes over logging in a user after logout
-
-        Expected result: true
-         */
-
-        System.out.println("\ntestUserLogin");
-        user.logout(); // Ensure logged out first
-        assertEquals(true, user.login());
-    }
-
-    @Test
-    void testUserLoginWhileAlreadyLoggedIn()
-    {
-        /*
-        testUserLoginWhileAlreadyLoggedIn checks logging in when already logged in
+        login_tc1 checks logging in when already logged in
 
         Expected result: false
          */
 
-        System.out.println("\ntestUserLoginWhileAlreadyLoggedIn");
-        assertEquals(false, user.login());
+        System.out.println("\nlogin_tc1");
+        user.login("example@email.com", "password");
+        assertEquals(false, user.login("example@email.com", "password"));
     }
+
+    @Test
+    void login_tc2()
+    {
+        /*
+        login_tc2 goes over logging in a user with invalid email
+
+        Expected result: false
+         */
+
+        System.out.println("\nlogin_tc2");
+        assertEquals(false, user.login("email", "password"));
+    }
+
+    @Test
+    void login_tc3()
+    {
+        /*
+        login_tc3 goes over logging in a user with invalid password
+
+        Expected result: false
+         */
+
+        System.out.println("\nlogin_tc3");
+        assertEquals(false, user.login("example@email.com", "pass"));
+    }
+
+    @Test
+    void login_tc4()
+    {
+        /*
+        login_tc4 goes over logging in a user with valid email/password combo
+
+        Expected result: true
+         */
+
+        System.out.println("\nlogin_tc4");
+        assertEquals(true, user.login("example@email.com", "password"));
+    }
+
+    @Test
+    public void logout_tc1()
+    {
+        /*
+        logout_tc1 checks logging out a user before being logged in
+
+        Expected result: false
+         */
+        assertEquals(false, user.logout());
+    }
+
+    @Test
+    public void logout_tc2()
+    {
+        /*
+        logout_tc2 checks logging out a user after being logged in
+
+        Expected result: true
+         */
+        user.login("example@email.com", "password");
+        assertEquals(true, user.logout());
+    }
+
 
     @Test
     void addCompletedProblem_tc1()
