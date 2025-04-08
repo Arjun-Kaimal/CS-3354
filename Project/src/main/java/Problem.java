@@ -3,7 +3,7 @@ public class Problem
     private String name;
     private String description;
     private String category;
-    private int difficulty;
+    private int difficulty; // 1 - 10 scale
     private String solution;
 
     public Problem(String name, String description, String category, int difficulty, String solution)

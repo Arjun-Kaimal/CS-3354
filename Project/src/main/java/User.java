@@ -53,6 +53,7 @@ public class User
             email = em;
             password = pass;
             isLoggedIn = true;
+            streak++;
             System.out.println("User logged in successfully.");
             return true;
         }
@@ -99,7 +100,15 @@ public class User
             return "Problem solution is empty!";
 
         completedProblems.add(problem);
+        checkIfQuestionsMilestoneReached();
+        points += problem.getDifficulty() * 5;
+        System.out.println(checkIfLevelUp());
 
+        return "Completed Problem added to user account successfully.";
+    }
+
+    public void checkIfQuestionsMilestoneReached()
+    {
         if(completedProblems.size() % 10 == 0)
         {
             LocalDate currentDate = LocalDate.now();
@@ -107,20 +116,16 @@ public class User
             if(completedProblems.size() % 100 == 0)
             {
                 Badge badge = new Badge("100 Questions Completed!", currentDate.toString(), 75);
-                points += 75;
+                points += badge.getPointsAwarded();
                 System.out.println(addBadge(badge));
             }
             else
             {
                 Badge badge = new Badge("10 Questions Completed!", currentDate.toString(), 25);
-                points += 25;
+                points += badge.getPointsAwarded();
                 System.out.println(addBadge(badge));
             }
-
-            System.out.println(checkIfLevelUp());
         }
-
-        return "Completed Problem added to user account successfully.";
     }
 
     public String checkIfLevelUp()
@@ -140,11 +145,13 @@ public class User
 
     public static String adjustStudyPlan()
     {
+        //add code here once StudyPlan class is completed!
         return "Study Plan adjusted successfully.";
     }
 
     public static void main(String args[])
     {
+        /**
         User user = new User();
         Problem problem = new Problem();
         for(int i=0; i<9; i++)
@@ -152,5 +159,6 @@ public class User
         System.out.println(user.addCompletedProblem(problem));
         
         user.logout();
+         */
     }
 }
