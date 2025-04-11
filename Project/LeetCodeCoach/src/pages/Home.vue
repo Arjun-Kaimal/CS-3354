@@ -1,7 +1,6 @@
 <template>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>LeetCodeCoach</title>
   
     <div class="gradient_background">
       <h1 class="welcome_msg">Welcome to NeetCode Coach <br>Your Ultimate LeetCode Guide</h1>
@@ -17,7 +16,6 @@
       </p>
       <div class="v15_6"></div>
       <p class="bottom_text">Ready to Level Up Your Coding Skills? Start your personalized journey today and become a LeetCode master with NeetCode Coach!</p>
-      <router-link to="/dashboard">Test Link</router-link>
   
       <router-link to="/dashboard" class="get_started_wrapper">
         <div class="get_started_background"></div>
