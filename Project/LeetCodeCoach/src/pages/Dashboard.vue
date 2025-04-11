@@ -1,7 +1,7 @@
 <template>
   <div class="dashboard">
     <aside class="sidebar">
-      <h2>Dashboard</h2>
+      <h2>LeetCodeCoach</h2>
       <nav>
         <router-link to="/completequestion" class="button">
           <span>Complete a Question</span>
@@ -25,12 +25,16 @@
         <div class="card">
           <h3>Your Progress At a Glance</h3>
           <p>Track your journey and see how far you have come.</p>
-          <a href="#" class="button">View Progress</a>
+          <router-link to="/planprogress" class="button">
+          <span>View Progress</span>
+        </router-link>
         </div>
         <div class="card">
           <h3>Personalized Study Plan</h3>
           <p>Let NeetCode Coach build a personalized study plan for you.</p>
-          <a href="#" class="button">Start</a>
+          <router-link to="/buildplan" class="button">
+          <span>Build Study Plan</span>
+        </router-link>
         </div>
       </div>
 
@@ -45,8 +49,10 @@
           <span>Solve Now</span>
         </router-link>
 
-        <h4 class="alt-heading">Or choose a question from here</h4>
-        <a href="#" class="button">View Complete List of Questions</a>
+        <h4 class="alt-heading">Or view your profile</h4>
+        <router-link to="/profile" class="button">
+          <span>User Profile</span>
+        </router-link> 
       </div>
     </main>
   </div>
@@ -77,6 +83,9 @@ body {
 }
 
 .dashboard {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   display: flex;
   min-height: 100vh;
 }
@@ -112,20 +121,23 @@ body {
 }
 
 .header {
-  font-size: 3rem;
+  font-size: 80px;
   font-weight: bold;
+  color: white;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 40px;
 }
 
 .card {
   background-color: #d9d9d9;
-  padding: 2rem;
+  padding: 75px;
   border-radius: 20px;
+  color: black;
+  font-size: 25px;
 }
 
 .card h3 {
@@ -150,21 +162,23 @@ body {
 
 .full-card {
   background-color: #d9d9d9;
-  padding: 2rem;
+  padding: 75px;
   border-radius: 20px;
+  color: black;
+  font-size: 25px;
 }
 
 .full-card h4 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 
 .full-card .button {
-  margin-top: 1rem;
+  margin-top: 20px;
 }
 
 .alt-heading {
-  margin-top: 2rem;
+  margin-top: 50px;
 }
 
 @media (max-width: 900px) {

@@ -1,233 +1,141 @@
 <template>
-    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet" />
-    <title>Document</title>
-    <div class="v19_201">
-        <div class="v19_202"></div>
-        <span class="v19_232">[USERNAME]</span>
-        <div class="v19_235"></div>
-        <div class="v19_237"></div>
-        <div class="v19_338"></div>
-        <div class="v19_341"></div>
-        <div class="v19_239"></div>
-        <div class="v19_241"></div>
-        <span class="v19_250">[USERNAME]</span>
-        <span class="v19_320">[User information]</span>
-        <span class="v19_339">[Condensed progress data.]</span>
-        <span class="v19_343">[Current recommended goal (study plan)]</span>
-        <span class="v19_322">[Recently completed questions.]</span>
-        <div class="name"></div>
-        <div class="v19_345"></div>
-        <span class="v19_447">AI Coach</span>
-        <span class="v19_448">Hi! I try to offer advice and things. Users can choose to interact with the coach if they want to. However, I won’t help answer questions!</span>
-    </div>
-    <router-view />
+  <div class="user-profile">
+    <header class="header-gradient">
+      <h1 class="username">Hello, CS_3354_LeetCodeCoach_User !</h1>
+    </header>
+
+    <section class="profile-summary">
+      <div class="user-info">
+        <p class="subhead_text">[User information]</p>       
+        <p>Name: CS_3354</p>
+        <p>Email: cs3354@leetcodecoach.com</p>
+      </div>
+      <div class="recent-questions">
+        <p class="subhead_text">[Recently completed questions]</p>
+        <p>Question 341 - Maximum sub-array</p>
+      </div>
+    </section>
+
+    <section class="progress-goals">
+      <div class="progress-box">
+        <p class="subhead_text">[Condensed progress data]</p>
+        <p>Streak: 364 days!!!</p>
+        <p>LeaderBoard: 45th Place</p>
+      </div>
+      <div class="goals-box">
+        <p class="subhead_text">[Current recommended goal]</p>
+        <p>Try solving with lower complexity solutions.</p>
+        <p>Try solving some medium/hard questions.</p>
+      </div>
+    </section>
+
+    <aside class="ai-coach">
+      <h2>AI Coach</h2>
+      <p>Hi! I try to offer advice and things. Users can choose to interact with the coach if they want to. However, I won’t help answer questions!</p>
+    </aside>
+  
+  <router-link to="/dashboard">
+      <span class="button">Go Home</span>
+    </router-link>
+  </div>
+  <router-view />
 </template>
 
 <style scoped>
-    * {
-  box-sizing: border-box;
-}
-body {
-  font-size: 14px;
-}
-.v19_201 {
-  width: 100%;
-  height: 1851px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
+.user-profile {
+  font-family: 'Inter', sans-serif;
+  background: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
   position: absolute;
   top: 0px;
   left: 0px;
-  overflow: hidden;
-}
-.v19_202 {
   width: 100%;
-  height: 214px;
-  background: linear-gradient(rgba(52,112,191,1), rgba(18,71,133,1));
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-}
-.v19_232 {
-  width: 820px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 431px;
-  left: 557px;
-  font-family: Inter;
-  font-weight: Semi Bold;
-  font-size: 128px;
-  opacity: 1;
-  text-align: left;
-}
-.v19_235 {
-  width: 100%;
-  height: 395px;
-  background: rgba(217,217,217,1);
-  opacity: 1;
-  position: absolute;
-  top: 698px;
-  left: 236px;
-}
-.v19_237 {
-  width: 611px;
-  height: 100%;
-  background: rgba(217,217,217,1);
-  opacity: 1;
-  position: absolute;
-  top: 698px;
-  left: 1409px;
-}
-.v19_338 {
-  width: 630px;
-  height: 619px;
-  background: rgba(217,217,217,1);
-  opacity: 1;
-  position: absolute;
-  top: 1141px;
-  left: 236px;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  overflow: hidden;
-}
-.v19_341 {
-  width: 442px;
-  height: 619px;
-  background: rgba(217,217,217,1);
-  opacity: 1;
-  position: absolute;
-  top: 1141px;
-  left: 912px;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  overflow: hidden;
-}
-.v19_239 {
-  width: 611px;
-  height: 473px;
-  background: rgba(217,217,217,1);
-  opacity: 1;
-  position: absolute;
-  top: 233px;
-  left: 2114px;
-}
-.v19_241 {
-  width: 128px;
-  height: 482px;
-  background: rgba(217,217,217,1);
-  opacity: 1;
-  position: absolute;
-  top: 57px;
-  left: 2597px;
-}
-.v19_250 {
-  width: 410px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 274px;
-  left: 2285px;
-  font-family: Inter;
-  font-weight: Semi Bold;
-  font-size: 64px;
-  opacity: 1;
-  text-align: left;
-}
-.v19_320 {
-  width: 412px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 726px;
-  left: 264px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v19_339 {
-  width: 491px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 1162px;
-  left: 264px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v19_343 {
-  width: 399px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 1162px;
-  left: 931px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v19_322 {
-  width: 483px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 726px;
-  left: 1442px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.name {
-  color: #fff;
-}
-.v19_345 {
-  width: 606px;
-  height: 875px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: absolute;
-  top: 726px;
-  left: 2089px;
-  border: 3px solid rgba(44,44,44,1);
-  border-top-left-radius: 59px;
-  border-top-right-radius: 59px;
-  border-bottom-left-radius: 59px;
-  border-bottom-right-radius: 59px;
-  overflow: hidden;
-}
-.v19_447 {
-  width: 194px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 762px;
-  left: 2185px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 40px;
-  opacity: 1;
-  text-align: left;
-}
-.v19_448 {
-  width: 502px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 818px;
-  left: 2138px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 36px;
-  opacity: 1;
-  text-align: left;
 }
 
+.header-gradient {
+  width: 100%;
+  background: linear-gradient(rgba(52,112,191,1), rgba(18,71,133,1));
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+
+.username {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.profile-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.user-info, .recent-questions {
+  background: #d9d9d9;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.subhead_text {
+  color: rgba(52,112,191,1);
+  font-size: 30px;
+  white-space: nowrap;
+}
+
+.progress-goals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  color: black;
+}
+
+.progress-box, .goals-box {
+  background: #d9d9d9;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  font-size: 1.5rem;
+}
+
+.ai-coach {
+  background: white;
+  border: 3px solid #2c2c2c;
+  border-radius: 59px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  font-size: 1.25rem;
+  text-align: center;
+  color: black;
+}
+
+.ai-coach h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.button {
+  background: rgba(52,112,191,1);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-left: 0px
+}
 </style>

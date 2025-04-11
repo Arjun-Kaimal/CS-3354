@@ -1,16 +1,19 @@
 <template>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet" />
-    <title>Document</title>
-    <div class="v16_621">
-        <div class="v16_623"></div>
-        <div class="v16_707"></div>
-        <span class="v19_97">Question</span>
-        <div class="v16_708"></div>
-        <div class="v16_709"></div>
-        <div class="v19_162"></div>
-        <span class="v19_164">Misc. information about the question</span>
-        <span class="v19_73">Your answer here:</span>
+    <title>Complete a Question</title>
+    <div class="background">
+      <div class="header"></div>
+      <div class="question_box">
+        <span class="question_text">Question:</span>
+        <p class="question_text2">Given an integer array [nums], find the subarray <br> with the largest sum, and return its sum.</p>
+      </div>
+      <div class="answer_box">
+        <span class="answer_text">Your Answer:</span>
+        <textarea class="user_response"></textarea>
+      </div>     
+      <router-link to="/dashboard">
+      <span class="button">Submit!</span>
+    </router-link>   
     </div>
     <router-view />
 </template>
@@ -22,7 +25,7 @@
 body {
   font-size: 14px;
 }
-.v16_621 {
+.background {
   width: 100%;
   height: 1851px;
   background: rgba(255,255,255,1);
@@ -32,107 +35,89 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v16_623 {
+.header {
   width: 100%;
   height: 214px;
-  background: linear-gradient(rgba(52,112,191,1), rgba(18,71,133,1));
+  background: rgba(52,112,191,1);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;
 }
-.v16_707 {
-  width: 100%;
-  height: 523px;
+.question_box {
+  width: 85%;
+  height: 500px;
   background: rgba(217,217,217,1);
   opacity: 1;
-  position: absolute;
-  top: 276px;
-  left: 238px;
-  border-top-left-radius: 48px;
-  border-top-right-radius: 48px;
-  border-bottom-left-radius: 48px;
-  border-bottom-right-radius: 48px;
-  overflow: hidden;
+  margin-top: 250px;
+  margin-left: 100px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
 }
-.v19_97 {
-  width: 212px;
+.question_text {
+  width: 200px;
   color: rgba(0,0,0,1);
-  position: absolute;
-  top: 315px;
-  left: 275px;
+  margin-left: 50px;
   font-family: Inter;
   font-weight: Regular;
-  font-size: 49px;
+  font-size: 50px;
   opacity: 1;
   text-align: left;
 }
-.v16_708 {
-  width: 100%;
-  height: 762px;
-  background: rgba(44,44,44,1);
-  opacity: 1;
-  position: absolute;
-  top: 909px;
-  left: 238px;
-  border-top-left-radius: 33px;
-  border-top-right-radius: 33px;
-  border-bottom-left-radius: 33px;
-  border-bottom-right-radius: 33px;
-  overflow: hidden;
-}
-.v16_709 {
-  width: 609px;
-  height: 664px;
-  background: rgba(217,217,217,1);
-  opacity: 1;
-  position: absolute;
-  top: 276px;
-  left: 1923px;
-  border-top-left-radius: 45px;
-  border-top-right-radius: 45px;
-  border-bottom-left-radius: 45px;
-  border-bottom-right-radius: 45px;
-  overflow: hidden;
-}
-.v19_162 {
-  width: 609px;
-  height: 507px;
-  background: rgba(217,217,217,1);
-  opacity: 1;
-  position: absolute;
-  top: 983px;
-  left: 1923px;
-  border-top-left-radius: 45px;
-  border-top-right-radius: 45px;
-  border-bottom-left-radius: 45px;
-  border-bottom-right-radius: 45px;
-  overflow: hidden;
-}
-.v19_164 {
-  width: 555px;
+.question_text2 {
   color: rgba(0,0,0,1);
-  position: absolute;
-  top: 1018px;
-  left: 1960px;
+  margin-left: 50px;
   font-family: Inter;
   font-weight: Regular;
-  font-size: 49px;
+  font-size: 40px;
   opacity: 1;
   text-align: left;
+  padding-top: 75px;
 }
-.v19_73 {
+.answer_box {
+  width: 85%;
+  height: 750px;
+  background: rgba(217,217,217,1);
+  opacity: 1;
+  margin-top: 250px;
+  margin-left: 100px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px; 
+  gap: 20px;
+}
+.answer_text {
   width: 409px;
   color: rgba(0,0,0,1);
-  position: absolute;
-  top: 827px;
-  left: 238px;
   font-family: Inter;
   font-weight: Regular;
+  margin-left: 50px;
   font-size: 48px;
   opacity: 1;
   text-align: left;
+  white-space: nowrap;
 }
-
+.user_response {
+  flex-grow: 1; /* fills remaining height */
+  width: 100%;
+  font-size: 18px;
+  padding: 1rem;
+  border-radius: 20px;
+  border: none;
+  resize: none;
+  font-family: Inter, sans-serif;
+  background-color: rgba(238, 239, 244, 0.956);
+  border-color: white;
+}
+.button {
+  background-color: rgb(66, 212, 66);
+  color: black;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-left: 750px
+}
 </style>

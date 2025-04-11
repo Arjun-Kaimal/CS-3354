@@ -1,348 +1,106 @@
 <template>
-    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet" />
-    <title>Document</title>
-    <div class="v23_413">
-        <div class="v23_414"></div>
-        <div class="v23_415"></div>
-        <span class="v23_416">LeaderBoard</span>
-        <div class="v23_417"></div>
-        <div class="v23_425"></div>
-        <span class="v23_418">1st </span>
-        <span class="v23_419">Arjun</span>
-        <span class="v23_420">500pts</span>
-        <div class="v23_427"></div>
-        <div class="v23_428"></div>
-        <span class="v23_429">2nd</span>
-        <span class="v23_430">Aryan</span>
-        <span class="v23_431">400pts</span>
-        <div class="v23_433"></div>
-        <div class="v23_434"></div>
-        <span class="v23_435">3rd </span>
-        <span class="v23_436">Arya</span>
-        <span class="v23_437">360pts</span>
-        <div class="v23_439"></div>
-        <div class="v23_440"></div>
-        <span class="v23_441">45th</span>
-        <span class="v23_442">Barkat</span>
-        <span class="v23_443">90pts</span>
-        <span class="v23_445">Your Position</span>
-        <div class="v23_446"></div>
-        <span class="v23_447">View Full LeaderBoard</span>
+  <div class="leaderboard">
+    <div class="header">
+      <h1>LeaderBoard</h1>
     </div>
-    <router-view />
+
+    <div class="entries">
+      <div class="entry">
+        <span class="rank">1st</span>
+        <span class="name">Arjun</span>
+        <span class="points">500pts</span>
+      </div>
+      <div class="entry">
+        <span class="rank">2nd</span>
+        <span class="name">Aryan</span>
+        <span class="points">400pts</span>
+      </div>
+      <div class="entry">
+        <span class="rank">3rd</span>
+        <span class="name">Arya</span>
+        <span class="points">360pts</span>
+      </div>
+    </div>
+
+    <div class="your-position">
+      <h2>Your Position</h2>
+      <div class="entry">
+        <span class="rank">45th</span>
+        <span class="name">Barkat</span>
+        <span class="points">90pts</span>
+      </div>
+    </div>
+
+    <router-link to="/dashboard" class="full-view-button">
+      Back Home
+    </router-link>
+  </div>
+  <router-view />
 </template>
 
 <style scoped>
-    * {
-  box-sizing: border-box;
-}
-body {
-  font-size: 14px;
-}
-.v23_413 {
-  width: 100%;
-  height: 1364px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
+.leaderboard {
+  font-family: 'Inter', sans-serif;
+  background: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
   position: absolute;
   top: 0px;
   left: 0px;
-  overflow: hidden;
-}
-.v23_414 {
   width: 100%;
-  height: 680px;
-  background: rgba(217,217,217,1);
-  opacity: 1;
-  position: absolute;
-  top: 168px;
-  left: 124px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  overflow: hidden;
-}
-.v23_415 {
-  width: 100%;
-  height: 164px;
-  background: rgba(30,95,180,1);
-  opacity: 1;
-  position: absolute;
-  top: 168px;
-  left: 124px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  overflow: hidden;
-}
-.v23_416 {
-  width: 389px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 211px;
-  left: 419px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 64px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_417 {
-  width: 100%;
-  height: 93px;
-  background: rgba(2,2,9,1);
-  opacity: 1;
-  position: absolute;
-  top: 375px;
-  left: 124px;
-}
-.v23_425 {
-  width: 100%;
-  height: 93px;
-  background: rgba(2,2,9,1);
-  opacity: 1;
-  position: absolute;
-  top: 375px;
-  left: 124px;
-}
-.v23_418 {
-  width: 179px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 399px;
-  left: 158px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_419 {
-  width: 148px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 399px;
-  left: 570px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_420 {
-  width: 185px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 399px;
-  left: 916px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_427 {
-  width: 100%;
-  height: 93px;
-  background: rgba(2,2,9,1);
-  opacity: 1;
-  position: absolute;
-  top: 535px;
-  left: 124px;
-}
-.v23_428 {
-  width: 100%;
-  height: 93px;
-  background: rgba(2,2,9,1);
-  opacity: 1;
-  position: absolute;
-  top: 535px;
-  left: 124px;
-}
-.v23_429 {
-  width: 179px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 559px;
-  left: 158px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_430 {
-  width: 148px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 559px;
-  left: 570px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_431 {
-  width: 185px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 559px;
-  left: 916px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_433 {
-  width: 100%;
-  height: 93px;
-  background: rgba(2,2,9,1);
-  opacity: 1;
-  position: absolute;
-  top: 671px;
-  left: 124px;
-}
-.v23_434 {
-  width: 100%;
-  height: 93px;
-  background: rgba(2,2,9,1);
-  opacity: 1;
-  position: absolute;
-  top: 671px;
-  left: 124px;
-}
-.v23_435 {
-  width: 179px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 695px;
-  left: 158px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_436 {
-  width: 148px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 695px;
-  left: 570px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_437 {
-  width: 185px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 695px;
-  left: 916px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_439 {
-  width: 100%;
-  height: 93px;
-  background: rgba(2,2,9,1);
-  opacity: 1;
-  position: absolute;
-  top: 1051px;
-  left: 158px;
-}
-.v23_440 {
-  width: 100%;
-  height: 93px;
-  background: rgba(2,2,9,1);
-  opacity: 1;
-  position: absolute;
-  top: 1051px;
-  left: 158px;
-}
-.v23_441 {
-  width: 179px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 1075px;
-  left: 192px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_442 {
-  width: 148px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 1075px;
-  left: 604px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_443 {
-  width: 185px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 1075px;
-  left: 950px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_445 {
-  width: 419px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 926px;
-  left: 151px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 48px;
-  opacity: 1;
-  text-align: left;
-}
-.v23_446 {
-  width: 377px;
-  height: 78px;
-  background: rgba(49,42,165,1);
-  opacity: 1;
-  position: absolute;
-  top: 1222px;
-  left: 472px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  overflow: hidden;
-}
-.v23_447 {
-  width: 338px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 1241px;
-  left: 490px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 32px;
-  opacity: 1;
-  text-align: left;
 }
 
+.header {
+  background: #1e5fb4;
+  width: 100%;
+  border-radius: 30px;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.entries, .your-position {
+  background: #020209;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.entry {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.rank, .name, .points {
+  flex: 1;
+  text-align: center;
+}
+
+.your-position h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.full-view-button {
+  background: #312aa5;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
 </style>
