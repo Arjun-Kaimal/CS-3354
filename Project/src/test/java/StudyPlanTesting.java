@@ -26,6 +26,9 @@ public class StudyPlanTesting {
         studyPlan.markChapterCompleted();
         studyPlan.markChapterCompleted();
 
+
+
+
         assertEquals(100.0, studyPlan.getProgressPercentage());
     }
 
