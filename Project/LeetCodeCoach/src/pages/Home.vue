@@ -1,10 +1,10 @@
 <template>
   <div class="page">
     <div class="auth_buttons">
-      <div class="sign_up">
+      <div class="sign_up" @click="showSignup = true">
         <span class="sign_up_text">Sign up</span>
       </div>
-      <div class="log_in">
+      <div class="log_in" @click="showLogin = true">
         <span class="log_in_text">Log In</span>
       </div>
     </div>
@@ -23,7 +23,6 @@
       Smart Recommendations – Receive AI-driven suggestions for the next best problem to solve.
     </p>
 
-
     <p class="bottom_text">Ready to Level Up Your Coding Skills? Start your personalized journey today and become a LeetCode master with NeetCode Coach!</p>
 
     <router-link to="/dashboard" class="get_started_wrapper">
@@ -31,11 +30,21 @@
       <span class="get_started_button">Get Started</span>
     </router-link>
 
-    
+    <Login :show="showLogin" @close="showLogin = false" />
+    <Signup :show="showSignup" @close="showSignup = false" />
   </div>
 
   <router-view />
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import Login from '../components/Login.vue';
+import Signup from '../components/Signup.vue';
+
+const showLogin = ref(false);
+const showSignup = ref(false);
+</script>
 
 <style scoped>
 .page {
