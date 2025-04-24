@@ -3,6 +3,9 @@
     <aside class="sidebar">
       <h2>LeetCodeCoach</h2>
       <nav>
+        <router-link to="/" class="button">
+          <span>Log Out</span>
+      </router-link>
         <router-link to="/completequestion" class="button">
           <span>Complete a Question</span>
         </router-link>
