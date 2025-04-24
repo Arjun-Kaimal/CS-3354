@@ -8,14 +8,14 @@
         <span class="log_in_text">Log In</span>
       </div>
     </div>
-    <h1 class="welcome_msg">Welcome to NeetCode Coach <br>Your Ultimate LeetCode Guide</h1>
+    <h1 class="welcome_msg">Welcome to LeetCodeCoach <br>Your Ultimate LeetCode Guide</h1>
     <h2 class="subheading">Master LeetCode with a Personalized Study Plan.</h2>
 
-    <p class="text">Struggling to crack coding interviews? NeetCode Coach is your personal AI-powered coach, designed to help you systematically improve your problem-solving skills.</p>
+    <p class="text">Struggling to crack coding interviews? LeetCodeCoach is your personal AI-powered coach, designed to help you systematically improve your problem-solving skills.</p>
 
     <h2 class="second_body">Whether you're a beginner or a seasoned coder, we create a customized roadmap to guide you through LeetCode problems efficiently.</h2>
 
-    <p class="main_body">How NeetCode Coach Helps You Succeed:<br>
+    <p class="main_body">How LeetCodeCoach Helps You Succeed:<br>
       Adaptive Study Plan – Get a dynamic problem list tailored to your skill level and progress.<br>
       Leaderboard – Compete with others and track your ranking based on problem-solving consistency and accuracy.<br>
       Detailed Problem Insights – Understand patterns, approaches, and optimal solutions for every problem.<br>
@@ -23,7 +23,7 @@
       Smart Recommendations – Receive AI-driven suggestions for the next best problem to solve.
     </p>
 
-    <p class="bottom_text">Ready to Level Up Your Coding Skills? Start your personalized journey today and become a LeetCode master with NeetCode Coach!</p>
+    <p class="bottom_text">Ready to Level Up Your Coding Skills? Start your personalized journey today and become a LeetCode master with LeetCodeCoach!</p>
 
     <router-link to="/dashboard" class="get_started_wrapper">
       <div class="get_started_background"></div>

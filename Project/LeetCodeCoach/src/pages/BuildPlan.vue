@@ -2,7 +2,7 @@
   <div class="study-plan">
     <h1>Build your personalized Study Plan</h1>
     <p class="intro">
-      Let NeetCode Coach craft a custom roadmap to help you master LeetCode problems efficiently.
+      Let LeetCodeCoach craft a custom roadmap to help you master LeetCode problems efficiently.
       Answer a few questions, and we’ll generate a study plan tailored to your skills and goals.
     </p>
 

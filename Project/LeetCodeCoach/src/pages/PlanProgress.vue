@@ -23,7 +23,7 @@
       </div>
 
       <div class="suggestions">
-        <h2>NeetCode AI Coach Suggestions</h2>
+        <h2>LeetCode AI Coach Suggestions</h2>
         <ul>
           <li>You're doing great with Arrays! Try focusing on Graphs next.</li>
           <li>You've attempted 5 DP problems but struggled with Memoization. Want to review it?</li>

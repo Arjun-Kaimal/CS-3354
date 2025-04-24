@@ -31,7 +31,7 @@
         </div>
         <div class="card">
           <h3>Personalized Study Plan</h3>
-          <p>Let NeetCode Coach build a personalized study plan for you.</p>
+          <p>Let LeetCodeCoach build a personalized study plan for you.</p>
           <router-link to="/buildplan" class="button">
           <span>Build Study Plan</span>
         </router-link>
