@@ -17,8 +17,8 @@
     <div class="stats-and-suggestions">
       <div class="statistics">
         <h2>Statistics</h2>
-        <p>Total Questions Solved: 50</p>
-        <p>Current Streak: 7 Days</p>
+        <p>Total Questions Solved: 2</p>
+        <p>Current Streak: 364 Days</p>
         <p>Accuracy Rate: 78%</p>
       </div>
 
