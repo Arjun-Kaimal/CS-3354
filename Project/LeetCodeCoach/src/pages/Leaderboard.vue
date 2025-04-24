@@ -7,12 +7,12 @@
     <div class="entries">
       <div class="entry">
         <span class="rank">1st</span>
-        <span class="name">Arjun</span>
+        <span class="name">Arvindh</span>
         <span class="points">500pts</span>
       </div>
       <div class="entry">
         <span class="rank">2nd</span>
-        <span class="name">Aryan</span>
+        <span class="name">Barkat</span>
         <span class="points">400pts</span>
       </div>
       <div class="entry">
@@ -26,7 +26,7 @@
       <h2>Your Position</h2>
       <div class="entry">
         <span class="rank">45th</span>
-        <span class="name">Barkat</span>
+        <span class="name">Arjun</span>
         <span class="points">90pts</span>
       </div>
     </div>

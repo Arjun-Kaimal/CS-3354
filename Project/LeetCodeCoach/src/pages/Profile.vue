@@ -1,18 +1,19 @@
 <template>
   <div class="user-profile">
     <header class="header-gradient">
-      <h1 class="username">Hello, CS_3354_LeetCodeCoach_User !</h1>
+      <h1 class="username">Hello, Arjun Kaimal!</h1>
     </header>
 
     <section class="profile-summary">
       <div class="user-info">
         <p class="subhead_text">[User information]</p>       
-        <p>Name: CS_3354</p>
-        <p>Email: cs3354@leetcodecoach.com</p>
+        <p>Name: Arjun K.</p>
+        <p>Email: akaimal04@hotmail.com</p>
       </div>
       <div class="recent-questions">
         <p class="subhead_text">[Recently completed questions]</p>
-        <p>Question 341 - Maximum sub-array</p>
+        <p>Question 2 - Palindrome</p>
+        <p>Question 14 - Longest Common Prefix</p>
       </div>
     </section>
 

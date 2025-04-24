@@ -41,8 +41,8 @@
       <div class="full-card">
         <h4>Your Next Question</h4>
         <p>
-          <strong>Problem 341:</strong> Maximum Subarray Problem<br />
-          <em>Categories: Arrays, Algorithms</em>
+          <strong>Question 76:</strong> Reverse String<br />
+          <em>Categories: Arrays, Algorithms, Strings</em>
         </p>
 
         <router-link to="/completequestion" class="button">

@@ -4,8 +4,8 @@
     <div class="background">
       <div class="header"></div>
       <div class="question_box">
-        <span class="question_text">Question:</span>
-        <p class="question_text2">Given an integer array [nums], find the subarray <br> with the largest sum, and return its sum.</p>
+        <span class="question_text">Question 76: Reverse String</span>
+        <p class="question_text2">Write a function that reverses a string. The input string is given as an array of characters. You must do this by modifying the input array in-place with O(1) extra memory.</p>
       </div>
       <div class="answer_box">
         <span class="answer_text">Your Answer:</span>
@@ -62,7 +62,7 @@ body {
   margin-left: 50px;
   font-family: Inter;
   font-weight: Regular;
-  font-size: 50px;
+  font-size: 30px;
   opacity: 1;
   text-align: left;
 }
@@ -71,7 +71,7 @@ body {
   margin-left: 50px;
   font-family: Inter;
   font-weight: Regular;
-  font-size: 40px;
+  font-size: 30px;
   opacity: 1;
   text-align: left;
   padding-top: 75px;
