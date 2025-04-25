@@ -1,14 +1,14 @@
 <template>
   <div class="user-profile">
     <header class="header-gradient">
-      <h1 class="username">Hello, Arjun Kaimal!</h1>
+    <h1 class="username">User Profile</h1>
     </header>
 
     <section class="profile-summary">
       <div class="user-info">
-        <p class="subhead_text">[User information]</p>       
-        <p>Name: Arjun K.</p>
-        <p>Email: akaimal04@hotmail.com</p>
+        <p class="subhead_text">[User information]</p>   
+        <p v-if="user">Email: {{ user.email }}</p>
+        <p v-else>Loading user info...</p>
       </div>
       <div class="recent-questions">
         <p class="subhead_text">[Recently completed questions]</p>
@@ -42,6 +42,22 @@
   <router-view />
 </template>
 
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+import { getCurrentUser } from '@/firebase/auth' // adjust path if needed
+
+const user = ref<{ name: string; email: string } | null>(null)
+
+onMounted(async () => {
+  const currentUser = await getCurrentUser()
+  if (currentUser) {
+    user.value = {
+      name: currentUser.displayName || 'User',
+      email: currentUser.email || 'No Email',
+    }
+  }
+})
+</script>
 <style scoped>
 .user-profile {
   font-family: 'Inter', sans-serif;

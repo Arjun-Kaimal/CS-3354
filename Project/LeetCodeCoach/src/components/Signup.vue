@@ -3,16 +3,7 @@
     <div class="modal-content">
       <h2 class="modal-title">Sign Up</h2>
       <form @submit.prevent="handleSignup">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input 
-            type="text" 
-            id="name" 
-            v-model="name" 
-            required 
-            placeholder="Enter your name"
-          >
-        </div>
+        
         <div class="form-group">
           <label for="email">Email</label>
           <input 
@@ -68,7 +59,7 @@ const emit = defineEmits<{
 }>();
 
 const { register, error, loading } = useAuth();
-const name = ref('');
+
 const email = ref('');
 const password = ref('');
 const confirmPassword = ref('');
